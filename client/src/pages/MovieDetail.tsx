@@ -49,7 +49,7 @@ const MovieDetail = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
 
-                <div className="relative z-10 container mx-auto px-6 md:px-12 h-full flex flex-col md:flex-row items-end pb-12 gap-8">
+                <div className="relative z-10 container mx-auto px-6 md:px-12 h-full flex flex-col justify-end items-start md:flex-row md:items-end md:justify-start pb-12 gap-8 pt-24">
                     <div className="hidden md:block w-64 aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-white/10 flex-shrink-0 relative group">
                         <img src={movie.poster} alt={movie.title} className="w-full h-full object-cover" />
                         {movie.trailerUrl && (
@@ -71,7 +71,7 @@ const MovieDetail = () => {
                             <ArrowLeft className="w-4 h-4" /> Back to Movies
                         </Link>
 
-                        <div className="flex flex-wrap items-center gap-2 mb-4">
+                        <div className="flex flex-wrap items-center gap-3 mb-4">
                             {menuElements(movie.genres, (g: string) => (
                                 <span key={g} className="bg-white/10 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-medium border border-white/10">
                                     {g}
@@ -84,7 +84,7 @@ const MovieDetail = () => {
                             )}
                         </div>
 
-                        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">{movie.title}</h1>
+                        <h1 className="text-3xl md:text-6xl font-extrabold mb-4 leading-tight">{movie.title}</h1>
 
                         <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8">
                             <span className="flex items-center gap-2">
